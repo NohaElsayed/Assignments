@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Appointment Form</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+        <!-- LEFT SIDE: Doctor Image Section -->
+        <!-- This div contains the doctor image that fills the entire left panel -->
+        <div class="doctor-image">
+            <!-- Doctor image - will be styled to cover the full container -->
+            <img src="images/doctor.png" alt="Doctor">
+        </div>
+
+        <!-- RIGHT SIDE: Appointment Form Section -->
+        <!-- This div contains the form title, decorative elements, and the appointment form -->
+        <div class="form-section">
+            <!-- Form Title -->
+            <h1>Doctor Appointment Form</h1>
+            
+            <!-- Decorative spacer below title -->
+            <div class="title-spacer"></div>
+            
+            <!-- Red decorative line -->
+            <div class="red-line"></div>
+            
+            <!-- Spacer below the red line -->
+            <div class="line-spacer"></div>
+
+            <!-- Main Form Container -->
+            <form class="form-wrapper">
+                <!-- Appointment Date Field -->
+                <div class="form-row">
+                    <label>Appointment Date</label>
+                    <input type="date">
+                </div>
+
+                <!-- Appointment Time Field -->
+                <div class="form-row">
+                    <label>Appointment Time</label>
+                    <input type="time">
+                </div>
+
+                <!-- Patient Name Fields (First and Last) -->
+                <div class="form-row">
+                    <label>Name</label>
+                    <div class="name-fields">
+                        <input type="text" placeholder="First">
+                        <input type="text" placeholder="Last">
+                    </div>
+                </div>
+
+                <!-- Gender Selection (Radio Buttons) -->
+                <div class="form-row">
+                    <label>Gender</label>
+                    <div class="gender-options">
+                        <label>
+                            <input type="radio" name="gender" value="male"> Male
+                        </label>
+                        <label>
+                            <input type="radio" name="gender" value="female" checked> Female
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Phone Number Field -->
+                <div class="form-row">
+                    <label>Phone</label>
+                    <input type="tel" placeholder="####" style="width: 200px;">
+                </div>
+
+                <!-- Address Fields (City and State) -->
+                <div class="form-row">
+                    <label>Address</label>
+                    <div class="address-fields">
+                        <input type="text" placeholder="city">
+                        <input type="text" placeholder="state">
+                    </div>
+                </div>
+
+                <!-- Query/Message Text Area -->
+                <div class="query-row">
+                    <label>Your Query</label>
+                    <textarea></textarea>
+                </div>
+
+                <!-- Appointment Type Checkboxes -->
+                <div class="appointment-type-row">
+                    <label>Appointment Type</label>
+                    <div class="checkbox-group">
+                        <p>Select which appointment type(s) you require</p>
+                        <label><input type="checkbox" checked> Cervix checkup</label>
+                        <label><input type="checkbox" checked> Heart checkup</label>
+                        <label><input type="checkbox"> Eye check-up</label>
+                        <label><input type="checkbox"> Hearing Test</label>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="btn-wrapper">
+                    <button type="submit" class="send-btn">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

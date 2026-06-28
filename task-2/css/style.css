@@ -1,0 +1,254 @@
+   * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, 'Times New Roman', serif;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            max-width: 1100px;
+            width: 100%;
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        /* LEFT SIDE: Doctor Image - Full Coverage */
+        .doctor-image {
+            flex: 1;
+            position: relative;
+            min-height: 600px;
+            overflow: hidden;
+        }
+
+        .doctor-image img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* RIGHT SIDE: Form */
+        .form-section {
+            flex: 1;
+            padding: 40px 30px;
+        }
+
+        .form-section h1 {
+            font-size: 28px;
+            font-weight: bold;
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', serif;
+            line-height: 1.2;
+            margin: 0;
+        }
+
+        .title-spacer { height: 10px; }
+
+        .red-line {
+            height: 3px;
+            background-color: #cc0000;
+        }
+
+        .line-spacer { height: 30px; }
+
+        .form-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .form-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .form-row label {
+            width: 140px;
+            font-size: 14px;
+            font-weight: bold;
+            font-family: Georgia, 'Times New Roman', serif;
+            flex-shrink: 0;
+        }
+
+        .form-row input[type="date"],
+        .form-row input[type="time"],
+        .form-row input[type="text"],
+        .form-row input[type="tel"] {
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+            outline: none;
+            height: 30px;
+            padding: 0 8px;
+        }
+
+        .form-row input:focus {
+            border-color: #999;
+        }
+
+        .name-fields,
+        .address-fields {
+            display: flex;
+            gap: 10px;
+        }
+
+        .name-fields input,
+        .address-fields input {
+            width: 150px;
+        }
+
+        .gender-options {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .gender-options label {
+            width: auto;
+            font-weight: normal;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 14px;
+        }
+
+        .query-row,
+        .appointment-type-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .query-row label,
+        .appointment-type-row > label {
+            width: 140px;
+            font-size: 14px;
+            font-weight: bold;
+            font-family: Georgia, 'Times New Roman', serif;
+            flex-shrink: 0;
+            line-height: 30px;
+        }
+
+        .query-row textarea {
+            width: 280px;
+            height: 80px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+            resize: vertical;
+            outline: none;
+            padding: 6px 8px;
+        }
+
+        .query-row textarea:focus {
+            border-color: #999;
+        }
+
+        .checkbox-group {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .checkbox-group p {
+            font-size: 14px;
+            font-family: Georgia, 'Times New Roman', serif;
+            line-height: 1.4;
+            margin: 0 0 4px 0;
+        }
+
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 14px;
+            font-weight: normal;
+            width: auto;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            accent-color: #0066cc;
+            width: 16px;
+            height: 16px;
+        }
+
+        .btn-wrapper {
+            display: flex;
+            justify-content: flex-start;
+            padding-left: 140px;
+        }
+
+        .send-btn {
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            background-color: #f0f0f0;
+            cursor: pointer;
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 14px;
+            height: 30px;
+            width: 70px;
+        }
+
+        .send-btn:hover {
+            background-color: #ddd;
+        }
+
+        /* Mobile: stack vertically */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .doctor-image {
+                min-height: 300px;
+            }
+
+            .form-section {
+                padding: 20px;
+            }
+
+            .form-row,
+            .query-row,
+            .appointment-type-row {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .form-row label,
+            .query-row label,
+            .appointment-type-row > label {
+                width: 100%;
+            }
+
+            .name-fields,
+            .address-fields {
+                width: 100%;
+            }
+
+            .name-fields input,
+            .address-fields input,
+            .query-row textarea {
+                width: 100%;
+            }
+
+            .btn-wrapper {
+                padding-left: 0;
+            }
+        }
